@@ -35,11 +35,19 @@ class _MyHomePageState extends State<MyHomePage> {
       style: optionStyle,
     ),
     Text(
-      'Index 1: Business',
+      'Index 1: about',
       style: optionStyle,
     ),
     Text(
-      'Index 2: School',
+      'Index 2: Services',
+      style: optionStyle,
+    ),
+    Text(
+      'Index 3: Menu',
+      style: optionStyle,
+    ),
+    Text(
+      'Index 4: contact',
       style: optionStyle,
     ),
   ];
@@ -82,7 +90,7 @@ class _MyHomePageState extends State<MyHomePage> {
               },
             ),
             ListTile(
-              title: const Text('Business'),
+              title: const Text('About'),
               selected: _selectedIndex == 1,
               onTap: () {
                 // Update the state of the app
@@ -92,11 +100,31 @@ class _MyHomePageState extends State<MyHomePage> {
               },
             ),
             ListTile(
-              title: const Text('School'),
+              title: const Text('Services'),
               selected: _selectedIndex == 2,
               onTap: () {
                 // Update the state of the app
                 _onItemTapped(2);
+                // Then close the drawer
+                Navigator.pop(context);
+              },
+            ),
+            ListTile(
+              title: const Text('Menu'),
+              selected: _selectedIndex == 3,
+              onTap: () {
+                // Update the state of the app
+                _onItemTapped(3);
+                // Then close the drawer
+                Navigator.pop(context);
+              },
+            ),
+            ListTile(
+              title: const Text('Contact'),
+              selected: _selectedIndex == 4,
+              onTap: () {
+                // Update the state of the app
+                _onItemTapped(4);
                 // Then close the drawer
                 Navigator.pop(context);
               },
