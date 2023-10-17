@@ -61,7 +61,18 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text(widget.title)),
+      appBar: AppBar(
+        title: Text(widget.title),
+        actions: <Widget>[
+          // Add a search icon to the app bar
+          IconButton(
+            icon: Icon(Icons.search),
+            onPressed: () {
+              // Handle search action here
+            },
+          ),
+        ],
+      ),
       body: Center(
         child: _widgetOptions[_selectedIndex],
       ),
